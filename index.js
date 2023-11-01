@@ -157,7 +157,7 @@ function convertValues() {
         }).format(inputCurrencyValue * francoToday)
     }
 
-    /*function formatCurrency() {
+    function formatCurrency() {
 
         if(firstSelect.value == "dolar") {
             currencyValueToConvert.innerHTML = new Intl.NumberFormat("en-US", {
@@ -187,14 +187,14 @@ function convertValues() {
         }
     }
 
-    formatCurrency()*/
+    formatCurrency()
 }
 
 function changeCurrency() {
     const currencyName = document.getElementById("currency-name")
     const imageCurrency = document.querySelector(".image-currency")
     const imageMoney = document.querySelector(".image-money")
-    const currencyMoney = document.querySelector("currency-money")
+    const currencyMoney = document.getElementById("currency-money")
 
     if(secondSelect.value == "real") {
         currencyName.innerHTML = "Real Brasileiro"
@@ -221,14 +221,29 @@ function changeCurrency() {
         imageCurrency.src = "./Assets/euro.png"
     }
 
+    if(firstSelect.value == "euro") {
+        currencyMoney.innerHTML = "Euro"
+        imageMoney.src = "./Assets/euro.png"
+    }
+
     if (secondSelect.value == "libra") {
         currencyName.innerHTML = "Libra Esterlina"
         imageCurrency.src = "./Assets/libra.png"
     }
 
+    if(firstSelect.value == "libra") {
+        currencyMoney.innerHTML = "Libra Esterlina"
+        imageMoney.src = "./Assets/libra.png"
+    }
+
     if (secondSelect.value == "franco") {
         currencyName.innerHTML = "Franco Suíço"
         imageCurrency.src = "./Assets/franco.png"
+    }
+
+    if(firstSelect.value == "franco") {
+        currencyMoney.innerHTML = "Franco Suíço"
+        imageMoney.src = "./Assets/franco.png"
     }
 
     convertValues()
