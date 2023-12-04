@@ -1,5 +1,5 @@
 * {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,21 +7,16 @@
 }
 
 body {
-    background: #8a51fc;
-}
-
-.logo-image {
-    width: 300px;
-    height: 300px;
-    margin: 20px auto;
-    display: block;
+    background-image: url(./Assets/background-1.jpg);
+    background-size: 100%;
 }
 
 main {
-    background: #F4F4F4;
-    width: 375px;
+    background:linear-gradient(to bottom, #4d5480, #040822);
+    height: 690px;
+    width: 390px;
     border-radius: 20px;
-    margin: 0 auto 40px;
+    margin: 30px auto 40px;
     padding: 44px 24px;
 }
 
@@ -38,7 +33,7 @@ select, input {
     border: 1px solid #BBB;
     background: #FFF;
     appearance: none;
-    color: #555555;
+    color: #161515;
     font-size: 16px;
     font-weight: 700;
     line-height: 18px;
@@ -49,13 +44,16 @@ select, input {
 
 input{
     cursor: auto;
+    -webkit-appearance: none;
+    appearance: none;
 }
+
 
 button {
     width: 100%;
     height: 48px;
     border-radius: 5px;
-    background: #772FD3;
+    background: #0c0416;
     font-size: 18px;
     font-weight: 700;
     line-height: 18px;
@@ -76,16 +74,21 @@ button:active{
 
 section{
     border-radius: 20px;
-    border: 1px solid #772FD3;
-    margin-top: 36px;
-    padding: 12px;
+    border: 2px solid #0c0416;
+    margin-top: 24px;
+    padding: 16px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    /* gap: 10px; */
+    height: 236px;
 }
 
 .arrow-img{
     margin: 15px 0;
+    width: 26px;
+    height: 20px;
 }
 
 .currency-box{
@@ -96,12 +99,13 @@ section{
 }
 
 .currency{
-    color: #777;
+    color: #a5a3a3;
     font-size: 14px;
 }
 
 .currency-value, .currency-value-to-convert{
-    color: #141414;
+    color: whitesmoke;
     font-weight: 700;
-    font-size: 20px
+    font-size: 20px;
+    text-align: center;
 }
